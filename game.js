@@ -42,3 +42,34 @@ function checkAnswer(currentLevel) {
     startOver(); //Restart function called
   }
 }
+function nextSequence() {
+  //Function for next sequence
+  userClickedPattern = [];
+  level++; //increase level
+  $("#level-title").text("Level " + level); //update level title
+  var randomNumber = Math.floor(Math.random() * 4); //Random number between 0 and 3
+
+  // Random colours variable
+  var randomChosenColour = buttonColours[randomNumber];
+  gamePattern.push(randomChosenColour);
+
+  $("#" + randomChosenColour)
+    .fadeIn(100)
+    .fadeOut(100)
+    .fadeIn(100);
+  playSound(randomChosenColour);
+}
+
+function animatePress(currentColour) {
+  //Function to animate button click
+  $("#" + currentColour).addClass("pressed");
+  setTimeout(function () {
+    $("#" + currentColour).removeClass("pressed");
+  }, 100);
+}
+
+function playSound(name) {
+  //Audio play
+  var audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+}
