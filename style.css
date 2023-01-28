@@ -4,20 +4,20 @@ body {
 }
 #level-title {
   font-family: "Press Start 2P", cursive;
-  font-size: 3rem;
-  margin: 5%;
+  font-size: 2.5rem;
+  margin: 2%;
   color: #fef2bf;
 }
 .container {
   display: block;
-  width: 50%;
+  width: 55%;
   margin: auto;
 }
 .btn {
-  margin: 25px;
+  margin: 20px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 170px;
+  width: 170px;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -40,4 +40,51 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+/* Tablet  */
+@media (min-width: 768px) and (max-width: 1030px) {
+  .btn {
+    height: 120px;
+    width: 120px;
+  }
+  .container {
+    width: 70%;
+  }
+  #level-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  .btn {
+    height: 90px;
+    width: 90px;
+    margin: 18px;
+  }
+  .container {
+    width: 75%;
+    margin-top: 50px;
+  }
+  #level-title {
+    font-size: 2rem;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 420px) {
+  .btn {
+    height: 80px;
+    width: 80px;
+    margin: 7px;
+    border: 5px solid black;
+  }
+  .container {
+    margin-top: 100px;
+    width: 80%;
+  }
+  #level-title {
+    font-size: 1.5rem;
+  }
 }
