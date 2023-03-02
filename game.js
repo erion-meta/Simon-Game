@@ -1,10 +1,19 @@
-var buttonColours = ["red", "blue", "green", "yellow"]; //Button colours array
-var gamePattern = []; //Game pattern empty array
-var userClickedPattern = [];
-var started = false;
-var level = 0;
+const buttonColours = ["red", "blue", "green", "yellow"]; //Button colours array
+let gamePattern = []; //Game pattern empty array
+let userClickedPattern = [];
+let started = false;
+let level = 0;
+const startGameButton = document.getElementById("startGame");
 
-$(document).keypress(function () {
+// $(document).keypress(function () {
+//   if (!started) {
+//     $("#level-title").text("Level " + level); //update level title
+//     nextSequence();
+//     started = true;
+//   }
+// });
+
+startGameButton.addEventListener("click", () => {
   if (!started) {
     $("#level-title").text("Level " + level); //update level title
     nextSequence();
@@ -33,7 +42,7 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong"); //Play wrong sound
     $("body").addClass("game-over"); // Add game-over class
-    $("#level-title").text("Game Over, Press Any Key to Restart"); // change title to Game over
+    $("#level-title").text("Game Over, Press Start Game to Restart"); // change title to Game over
 
     setTimeout(function () {
       //Remove game-over class
