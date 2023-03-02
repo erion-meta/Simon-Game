@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
 body {
   text-align: center;
   background-color: #011f3f;
   position: relative;
 }
 #level-title {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
   margin: 2%;
   color: #fef2bf;

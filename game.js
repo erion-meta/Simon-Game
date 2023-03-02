@@ -5,14 +5,6 @@ let started = false;
 let level = 0;
 const startGameButton = document.getElementById("startGame");
 
-// $(document).keypress(function () {
-//   if (!started) {
-//     $("#level-title").text("Level " + level); //update level title
-//     nextSequence();
-//     started = true;
-//   }
-// });
-
 startGameButton.addEventListener("click", () => {
   if (!started) {
     $("#level-title").text("Level " + level); //update level title
